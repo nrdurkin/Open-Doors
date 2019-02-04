@@ -1,20 +1,20 @@
 var express = require('express');
 
 var app = express();
-const bodyParser = require("body-parser");
 var port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/public'));
+
 
 app.get('/', function(req, res) {
     res.send('index.html');
 });
 app.get('/about', function(req, res) {
-    res.send('about.html');
+    res.sendFile('about.html', {root: __dirname + '/public'});
 });
 app.get('/projects', function(req, res) {
-    res.send('projects.html');
+    res.sendFile('projects.html', {root: __dirname + '/public'});
 });
 
 app.listen(port, function() {
-    console.log(`Example app listening on port ${port}!`);
+    console.log(`App listening on port ${port}!`);
 });
