@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="glide/css/glide.core.min.css">
+    <link rel="stylesheet" href="glide/css/glide.theme.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel='stylesheet' href='main.css'></link>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Oxygen|Signika" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class='banner'>
+        <div style='display:flex; align-items: center;'>
+            <div>Open Doors</div>
+        </div>
+    </div>
+    <nav style='display:flex; justify-content: center;'>
+        <div class='limit-width' style='height:100%;'>
+            <ol>
+                <li class='active page-link'>Home</li>
+                <li class='page-link' onclick='location.href="/about"'>About</li>
+                <li class='page-link' onclick='location.href="/projects"'>Projects</li>
+            </ol>
+        </div>
+    </nav>
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track" style='margin:0;'>
+            <ul class="glide__slides" style='margin:0;'>
+                <li class="glide__slide">
+                    <div class='slide'>
+                        <div class='photo-container'>
+                            <img src="/img/pup1.jpeg">
+                        </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class='slide'>
+                        <div class='photo-container'>
+                            <img src="/img/pup2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class='slide'>
+                        <div class='photo-container'>
+                            <img src="/img/pup3.jpg">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
+    </div>
+
+
+    <div style='height:200px; border:1px solid black;'>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quas, temporibus nihil eos aut quod in non
+        repellendus aliquam, nemo sint aliquid? A sapiente repellat perferendis earum facilis nesciunt eveniet?
+    </div>
+    <div style='height:200px; border:1px solid black;'>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quas, temporibus nihil eos aut quod in non
+        repellendus aliquam, nemo sint aliquid? A sapiente repellat perferendis earum facilis nesciunt eveniet?
+    </div>
+    <div style='height:200px; border:1px solid black;'>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quas, temporibus nihil eos aut quod in non
+        repellendus aliquam, nemo sint aliquid? A sapiente repellat perferendis earum facilis nesciunt eveniet?
+    </div>
+    <div style='height:200px; border:1px solid black;'>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quas, temporibus nihil eos aut quod in non
+        repellendus aliquam, nemo sint aliquid? A sapiente repellat perferendis earum facilis nesciunt eveniet?
+    </div>
+    <div style='height:200px; border:1px solid black;'>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quas, temporibus nihil eos aut quod in non
+        repellendus aliquam, nemo sint aliquid? A sapiente repellat perferendis earum facilis nesciunt eveniet?
+    </div>
+
+</body>
+<script src="glide/glide.min.js"></script>
+
+<script>
+    new Glide('.glide', {
+        type: 'carousel',
+        autoplay: 4000,
+        hoverpause: false,
+        swipeThreshold: false
+    }).mount()
+</script>
+
+<script>
+
+    // $(window).scroll(function(){
+    //     let height = 100-$(this).scrollTop();
+    //     let nav_min = 60;
+    //     $('nav').css('height', ((height>nav_min) ? height : nav_min) +'px')
+    // });
+</script>
+
+</html>
