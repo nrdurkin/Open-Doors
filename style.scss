@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .limit-width {
@@ -8,7 +9,6 @@ body {
     min-width: 550px;
     width: 100%;
 }
-
 
 .banner {
     height: 100px;
@@ -29,7 +29,7 @@ nav {
     position: sticky;
     top: 0px;
     height: 60px;
-    border-bottom:1px solid black;
+    border-bottom:1px solid whitesmoke;
 
     ol {
         height: 100%;
@@ -74,6 +74,56 @@ nav {
         height:100%;
         img{
             height:100%;
+        }
+    }
+}
+
+.title{
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-size:40px;
+    padding:10px;
+    background-color:whitesmoke;
+}
+
+
+.contact{
+    .input-container{
+        display:flex;
+        flex:1;
+        padding:3px;
+    }
+    input, textarea{
+        display: block;
+        flex:1;
+        padding:3px;
+        resize: none;
+        margin:0px;
+    }
+}
+
+.about{
+    .bio{
+        margin-top:20px;
+        max-width:500px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        border:1px solid lightgray;
+        border-radius:5px;
+        padding:5px 15px;
+
+        .bio-name{
+            font-size:30px;
+            font-family: 'Oxygen', sans-serif;
+            padding:5px;
+        }
+
+        img{
+            width:50%;
+        }
+        .caption{
+            font-size:12px;
         }
     }
 }

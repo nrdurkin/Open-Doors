@@ -1,39 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Open Doors</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="glide/css/glide.core.min.css">
-    <link rel="stylesheet" href="glide/css/glide.theme.min.css">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-    <link rel='stylesheet' href='main.css'></link>
-
-
-    <link href="https://fonts.googleapis.com/css?family=Oxygen|Signika" rel="stylesheet">
-
-</head>
+<%- include ./partials/header -%>
 
 <body>
-    <div class='banner'>
-        <div style='display:flex; align-items: center;'>
-            <div>Open Doors</div>
-        </div>
-    </div>
-    <nav style='display:flex; justify-content: center;'>
-        <div class='limit-width' style='height:100%;'>
-            <ol>
-                <li class='active page-link'>Home</li>
-                <li class='page-link' onclick='location.href="/about"'>About</li>
-                <li class='page-link' onclick='location.href="/projects"'>Projects</li>
-            </ol>
-        </div>
-    </nav>
+    <%- include ./partials/navigation -%>
     <div class="glide">
         <div class="glide__track" data-glide-el="track" style='margin:0;'>
             <ul class="glide__slides" style='margin:0;'>
@@ -102,14 +73,4 @@
         swipeThreshold: false
     }).mount()
 </script>
-
-<script>
-
-    // $(window).scroll(function(){
-    //     let height = 100-$(this).scrollTop();
-    //     let nav_min = 60;
-    //     $('nav').css('height', ((height>nav_min) ? height : nav_min) +'px')
-    // });
-</script>
-
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ./partials/header -%>
+
+<body>
+    <%- include ./partials/navigation -%>
+    <div style='display:flex; justify-content:center;' class='contact'>
+        <div class='limit-width'>
+            <div style='display:flex; flex-direction: column'>
+                <div class='title'>
+                    Contact Us
+                </div>
+                <div style='margin-bottom:10px; margin-top:10px'>
+                    Send us an email at
+                    <a href="mailto:opendoorsfoundationct@gmail.com" target="_top">OpenDoorsFoundationCT@gmail.com</a>:
+                </div>
+                <div style='width:100%'>
+                    <form id='email-form'>
+                        <div style='display:flex; flex-direction:row; width:100%'>
+                            <div class='input-container'>
+                                <input type="text" placeholder="Name:" name='name' required>
+                            </div>
+                            <div class='input-container'>
+                                <input type="email" placeholder="Email Address:" name='email' required>
+                            </div>
+                        </div>
+                        <div class='input-container'>
+                            <input type="text" placeholder="Subject:" name='subject' required minlength="5">
+                        </div>
+                        <div class='input-container'>
+                            <textarea type="text" placeholder="Message:" rows="10" name='message' required minlength="5"></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div id='recieved' style='display:none;'>
+                    Your message has been recieved
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $('#email-form').submit(e => {
+        let data = $('#email-form').serializeArray().reduce(function (obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+        }, {});
+
+        $.post('/contact', data,
+            d => {
+                $('#recieved').show();
+                $('#email-form')[0].reset();
+            })
+
+        e.preventDefault();
+    });
+</script>
+
+</html>

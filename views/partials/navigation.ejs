@@ -1,0 +1,15 @@
+<div class='banner'>
+    <div style='display:flex; align-items: center;'>
+        <div>Open Doors</div>
+    </div>
+</div>
+<nav style='display:flex; justify-content: center;'>
+    <div class='limit-width' style='height:100%;'>
+        <ol>
+            <li class="<%= title=='Open Doors' ? 'active':'' %> page-link" onclick='location.href="/"'>Home</li>
+            <li class="<%= title=='About Us' ? 'active':'' %> page-link" onclick='location.href="/about"'>About</li>
+            <li class="<%= title=='Projects' ? 'active':'' %> page-link" onclick='location.href="/projects"'>Projects</li>
+            <li class="<%= title=='Contact' ? 'active':'' %> page-link" onclick='location.href="/contact"'>Contact</li>
+        </ol>
+    </div>
+</nav>
