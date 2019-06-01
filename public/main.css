@@ -25,6 +25,7 @@ nav {
   z-index: 10;
   padding: 0;
   margin: 0;
+  margin-bottom: 10px;
   position: sticky;
   top: 0px;
   height: 60px;
@@ -55,6 +56,48 @@ nav ol li:hover {
   cursor: pointer;
 }
 
+.dropdown {
+  float: left;
+  overflow: hidden;
+  display: block;
+  height: 100%;
+}
+.dropdown .dropbtn {
+  height: 100%;
+  font-size: 16px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content .dropdown-link {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content .dropdown-link:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .glide {
   cursor: default !important;
 }
@@ -78,6 +121,7 @@ nav ol li:hover {
   font-size: 40px;
   padding: 10px;
   background-color: whitesmoke;
+  width: 100%;
 }
 
 .contact .input-container {
@@ -85,7 +129,8 @@ nav ol li:hover {
   flex: 1;
   padding: 3px;
 }
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
   display: block;
   flex: 1;
   padding: 3px;
@@ -93,7 +138,7 @@ nav ol li:hover {
   margin: 0px;
 }
 
-.about .bio {
+.board .bio {
   margin-top: 20px;
   max-width: 500px;
   display: flex;
@@ -103,16 +148,26 @@ nav ol li:hover {
   border-radius: 5px;
   padding: 5px 15px;
 }
-.about .bio .bio-name {
+.board .bio .bio-name {
   font-size: 30px;
   font-family: "Oxygen", sans-serif;
   padding: 5px;
 }
-.about .bio img {
+.board .bio img {
   width: 50%;
 }
-.about .bio .caption {
+.board .bio .caption {
   font-size: 12px;
+}
+
+.about .mission-statement {
+  width: 80%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.about .description div {
+  margin: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */

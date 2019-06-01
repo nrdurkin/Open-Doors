@@ -7,8 +7,19 @@
     <div class='limit-width' style='height:100%;'>
         <ol>
             <li class="<%= title=='Open Doors' ? 'active':'' %> page-link" onclick='location.href="/"'>Home</li>
-            <li class="<%= title=='About Us' ? 'active':'' %> page-link" onclick='location.href="/about"'>About</li>
-            <li class="<%= title=='Projects' ? 'active':'' %> page-link" onclick='location.href="/projects"'>Projects</li>
+            <li class="<%= title=='About Us' ? 'active':'' %> page-link dropdown">
+                    <div class="dropbtn" onclick='location.href="/about"'>
+                        <div>About
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class='dropdown-link' onclick='location.href="/about"'>Mission</div>
+                        <div class='dropdown-link' onclick='location.href="/board"'>Board</div>
+                    </div>
+                </li>
+            <li class="<%= title=='Projects' ? 'active':'' %> page-link" onclick='location.href="/projects"'>Projects
+            </li>
             <li class="<%= title=='Contact' ? 'active':'' %> page-link" onclick='location.href="/contact"'>Contact</li>
         </ol>
     </div>

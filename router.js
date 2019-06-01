@@ -28,6 +28,12 @@ handler.get('/about', (req, res) => {
     });
 });
 
+handler.get('/board', (req, res) => {
+    res.render('board', {
+        title: 'About Us'
+    });
+});
+
 handler.get('/projects', (req, res) => {
     res.render('projects', {
         title: 'Projects'
