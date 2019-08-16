@@ -64,7 +64,8 @@ nav {
             }
 
             &:hover {
-                background-color: lightgrey;
+                color:darkblue;
+                font-weight:bold;
                 cursor: pointer;
             }
         }
@@ -162,6 +163,9 @@ nav {
         padding: 3px;
         resize: none;
         margin: 0px;
+    }
+    textarea{
+        border-color:#ccc;
     }
 }
 

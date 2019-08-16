@@ -60,7 +60,8 @@ nav ol li.active {
   background-color: whitesmoke;
 }
 nav ol li:hover {
-  background-color: lightgrey;
+  color: darkblue;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -144,6 +145,9 @@ nav ol li:hover {
   padding: 3px;
   resize: none;
   margin: 0px;
+}
+.contact textarea {
+  border-color: #ccc;
 }
 
 .board .bio {
