@@ -40,6 +40,12 @@ handler.get('/projects', (req, res) => {
     });
 });
 
+handler.get('/support', (req, res) =>{
+    res.render('support', {
+        title: 'Support Us'
+    });
+});
+
 handler.get('/contact', (req, res) => {
     res.render('contact', {
         title: 'Contact'

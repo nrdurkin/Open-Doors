@@ -13,11 +13,20 @@ body {
 .banner {
     height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     background-color: whitesmoke;
     align-content: center;
     font-size: 50px;
     font-family: 'Signika', sans-serif;
+
+    .side-spacer{
+        width:150px;
+        display:flex;
+        align-items: center;
+        img{
+            height:80%;
+        }
+    }
 }
 
 
@@ -159,7 +168,7 @@ nav {
 .board {
     .bio {
         margin-top: 20px;
-        max-width: 500px;
+        max-width: 700px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -174,7 +183,7 @@ nav {
         }
 
         img {
-            width: 50%;
+            width: 60%;
         }
 
         .caption {
@@ -183,8 +192,8 @@ nav {
     }
 }
 
-.about {
-    .mission-statement {
+.about, .support {
+    .big-text {
         width: 80%;
         text-align: center;
         margin-top: 20px;
@@ -192,7 +201,7 @@ nav {
     }
 
     .description {
-        div {
+        p {
             margin:15px;
         }
     }
