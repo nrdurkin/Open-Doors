@@ -1,11 +1,19 @@
 <div class='banner'>
-    <div class='side-spacer'><img src="/img/logo.png" /></div>
+    <div class='side-spacer'>
+        <a href='/'><img src="/img/logo.png" /></a>
+        <div class='logo-subtitle edu-enl-emp'>
+            <span class='educate'>Educate</span>
+            <span class='enlighten'>Enlighten</span>
+            <span class='empower'>Empower</span>
+        </div>
+    </div>
     <div style='display:flex; align-items: center;'>
-        <div style='white-space:nowrap'>Open Doors</div>
+        <div style='white-space:nowrap' class='site-title'>Open Doors</div>
     </div>
     <div class='side-spacer'></div>
 
 </div>
+
 <nav style='display:flex; justify-content: center;'>
     <div class='limit-width' style='height:100%;'>
         <ol>
@@ -19,13 +27,25 @@
                 <div class="dropdown-content">
                     <div class='dropdown-link' onclick='location.href="/about"'>Mission</div>
                     <div class='dropdown-link' onclick='location.href="/board"'>Board</div>
+                    <div class='dropdown-link' onclick='location.href="/why-us"'>Why Open Doors?</div>
                 </div>
             </li>
             <li class="<%= title=='Projects' ? 'active':'' %> page-link" onclick='location.href="/projects"'>Projects
             </li>
-            <li class="<%= title=='Support Us' ? 'active':'' %> page-link" onclick='location.href="/support"'>Support Us</li>
+            <li class="<%= title=='Support Us' || title=='Donate' ? 'active':'' %> page-link dropdown">
+                <div class="dropbtn" onclick='location.href="/support"'>
+                    <div>Support Us
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="dropdown-content">
+                    <div class='dropdown-link' onclick='location.href="/donate"'>Make a Donation</div>
+                    <div class='dropdown-link' onclick='location.href="/involvement"'>Get Involved</div>
+                </div>
+            </li>
 
             <li class="<%= title=='Contact' ? 'active':'' %> page-link" onclick='location.href="/contact"'>Contact</li>
+            <li class="<%= title=='null' ? 'active':'' %> page-link" onclick='location.href="/test"'>Test</li>
         </ol>
     </div>
 </nav>

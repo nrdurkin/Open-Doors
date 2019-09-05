@@ -15,6 +15,11 @@ let transporter = nodemailer.createTransport({
     }
 });
 
+handler.get('/test', (req, res) => {
+    res.render('test', {
+        title: 'Open Doors'
+    });
+});
 
 handler.get('/', (req, res) => {
     res.render('index', {
@@ -24,6 +29,12 @@ handler.get('/', (req, res) => {
 
 handler.get('/about', (req, res) => {
     res.render('about', {
+        title: 'About Us'
+    });
+});
+
+handler.get('/why-us', (req, res) =>{
+    res.render('why-us', {
         title: 'About Us'
     });
 });
@@ -42,6 +53,18 @@ handler.get('/projects', (req, res) => {
 
 handler.get('/support', (req, res) =>{
     res.render('support', {
+        title: 'Support Us'
+    });
+});
+
+handler.get('/donate', (req, res) =>{
+    res.render('donate', {
+        title:'Donate'
+    });
+});
+
+handler.get('/involvement', (req, res) =>{
+    res.render('involvement', {
         title: 'Support Us'
     });
 });

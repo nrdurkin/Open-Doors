@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
 }
 
 .limit-width {
@@ -10,32 +10,109 @@ body {
     width: 100%;
 }
 
+.edu-enl-emp {
+    .educate {
+        color: #000080;
+    }
+
+    .enlighten {
+        color: #8ba685;
+    }
+
+    .empower {
+        color: lightblue;
+    }
+}
+
 .banner {
-    height: 100px;
+    height: 150px;
     display: flex;
     justify-content: space-around;
-    background-color: whitesmoke;
+    background-color: #677d9e;
     align-content: center;
-    font-size: 50px;
-    font-family: 'Signika', sans-serif;
+    font-family: "Signika", sans-serif;
 
-    .side-spacer{
-        width:150px;
-        display:flex;
+    .site-title {
+        color: #8ba685;
+        font-size: 70px;
+    }
+
+    .logo-subtitle {
+        font-family: "helvetica";
+        font-style: italic;
+    }
+
+    .side-spacer {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        img{
-            height:80%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        a{
+            height:100%;
+            display: flex;
+            align-items: center;
+        }
+        img {
+            height: 80%;
         }
     }
 }
 
+.footer{
+    height: 150px;
+    background-color: #677d9e;
+    display: flex;
+    justify-content: center;
+    .container{
+        display:flex;
+        flex-direction:row;
+        margin:auto;
+
+        .col{
+            flex:1;
+            color:white;
+            border-left:2px solid white;
+            padding-left:10px;
+            .section{
+                color:#8ba685;
+                a{
+                    text-decoration: none;
+                    color:inherit;
+                }
+            }
+        }
+    }
+}
+
+.test{
+    .banner{
+        background-color:#69c;
+        .site-title{
+            color:white;
+        }
+    }
+    .footer{
+        background-color:#69c;
+        .section{
+            color: #000080 !important;
+        }
+    }
+
+    .enlighten {
+        color: #375431 !important;
+    }
+    
+}
 
 nav {
     background-color: white;
     z-index: 10;
     padding: 0;
     margin: 0;
-    margin-bottom:10px;
+    // margin-bottom: 10px;
     position: sticky;
     top: 0px;
     height: 60px;
@@ -56,22 +133,20 @@ nav {
             height: 100%;
             display: flex;
             align-items: center;
-            font-family: 'Oxygen', sans-serif;
-
+            font-family: "Oxygen", sans-serif;
 
             &.active {
                 background-color: whitesmoke;
             }
 
             &:hover {
-                color:darkblue;
-                font-weight:bold;
+                color: darkblue;
+                font-weight: bold;
                 cursor: pointer;
             }
         }
     }
 }
-
 
 .dropdown {
     float: left;
@@ -118,17 +193,42 @@ nav {
     display: block;
 }
 
-
-
 .glide {
     cursor: default !important;
 }
 
 .slide {
-    background-color: black;
+    background-color: #69c;
     height: 500px;
     display: flex;
-    justify-content: center;
+
+    .caption-container {
+        flex: 1;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .caption {
+            font-family: "Oswald", sans-serif;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .learn-btn {
+            width: 100px;
+            background-color: #8ba685;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 15px;
+            margin-top: 15px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
 
     .photo-container {
         height: 100%;
@@ -140,14 +240,47 @@ nav {
 }
 
 .title {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: "Noto Sans", sans-serif;
     text-align: center;
     font-size: 40px;
     padding: 10px;
-    background-color: whitesmoke;
     width: 100%;
+    color: white;
+    background-color: #69c;
 }
 
+.home {
+    width: 100%;
+    align-items: center;
+
+    .title {
+        background-color: inherit;
+        // background-color:#677d9e;
+        flex: 1;
+    }
+
+    .home-content {
+        h2 {
+            text-align: center;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        p{
+            font-size:20px;
+            a{
+                text-decoration: none;
+                color:inherit;
+                &:hover{
+                    border-bottom:1px solid black;
+                }
+            }
+        }
+        .emphasis{
+            font-weight: 900;
+            font-size:23px;
+        }
+    }
+}
 
 .contact {
     .input-container {
@@ -164,8 +297,9 @@ nav {
         resize: none;
         margin: 0px;
     }
-    textarea{
-        border-color:#ccc;
+
+    textarea {
+        border-color: #ccc;
     }
 }
 
@@ -182,7 +316,7 @@ nav {
 
         .bio-name {
             font-size: 30px;
-            font-family: 'Oxygen', sans-serif;
+            font-family: "Oxygen", sans-serif;
             padding: 5px;
         }
 
@@ -196,7 +330,8 @@ nav {
     }
 }
 
-.about, .support {
+.about,
+.support {
     .big-text {
         width: 80%;
         text-align: center;
@@ -206,7 +341,7 @@ nav {
 
     .description {
         p {
-            margin:15px;
+            margin: 15px;
         }
     }
 }
