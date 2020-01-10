@@ -75,6 +75,8 @@ body {
 }
 .footer .container .col .section a {
   text-decoration: none;
+}
+.footer .container .col a {
   color: inherit;
 }
 
@@ -92,6 +94,10 @@ body {
 }
 .test .enlighten {
   color: #375431 !important;
+}
+
+.config .banner {
+  background-color: white;
 }
 
 nav {
@@ -287,7 +293,12 @@ nav ol li:hover {
   width: 60%;
 }
 .board .bio .caption {
-  font-size: 12px;
+  font-size: 14px;
+}
+.board .bio .quote {
+  margin: 15px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .about .big-text,

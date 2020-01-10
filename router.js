@@ -21,6 +21,12 @@ handler.get('/test', (req, res) => {
     });
 });
 
+handler.get('/config', (req, res) => {
+    res.render('config', {
+        title: 'Open Doors'
+    });
+});
+
 handler.get('/', (req, res) => {
     res.render('index', {
         title: 'Open Doors'

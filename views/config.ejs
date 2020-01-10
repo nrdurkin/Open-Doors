@@ -4,10 +4,42 @@
 <%- include ./partials/header -%>
 
 <body>
-<div class='test'>
     <%- include ./partials/navigation -%>
-</div>
-    TEST PAGE FOR NEW COLOR SCHEME
+
+    <div style='min-height:200px'>
+        <div>
+            <input type="range" min="50" max="300" value="150" id='banner-height'>
+            <div>Banner height: <span id='banner-height-val'>150</span></div>
+        </div>
+
+        <div>
+            <input type="range" min="50" max="150" value="70" id='title-height'>
+            <div>Title height: <span id='title-height-val'>70</span></div>
+        </div>
+
+        <div>
+            <input type="range" min="50" max="100" value="80" id='logo-height'>
+            <div>Logo %: <span id='logo-height-val'>80</span></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+        <script>
+            document.getElementById('banner-height').oninput = function() {
+                $('#banner-height-val').html(this.value);
+                $('.banner').css('height', this.value+"px");
+            }
+            document.getElementById('title-height').oninput = function() {
+                $('#title-height-val').html(this.value);
+                $('.site-title').css('font-size', this.value+"px");
+            }
+            document.getElementById('logo-height').oninput = function() {
+                $('#logo-height-val').html(this.value);
+                $('.side-spacer img').css('height', this.value+"%");
+            }
+        </script>
+    </div>
+
     <div class="glide">
         <div class="glide__track" data-glide-el="track" style='margin:0;'>
             <ul class="glide__slides" style='margin:0;'>
@@ -78,9 +110,8 @@
                 </div>
             </div>
         </div>
-    <div class='test'>
+
     <%- include ./partials/footer -%>
-    </div>
 </body>
 <script src="glide/glide.min.js"></script>
 

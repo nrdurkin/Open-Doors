@@ -1,4 +1,8 @@
 Style contact page
 update colors
-fill out support page, 
+fill out support page (click on support us), get involved
 mobile css
+
+
+Donate through page
+IRS clarification
