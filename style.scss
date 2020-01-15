@@ -47,8 +47,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 25px;
 
         a{
             height:100%;
@@ -203,6 +202,7 @@ nav {
 
 .glide {
     cursor: default !important;
+    background-color:#69c;
 }
 
 .slide {
@@ -356,6 +356,13 @@ nav {
     .description {
         p {
             margin: 15px;
+        }
+    }
+
+    .financial-info{
+        color:black;
+        &:hover{
+            color:darkblue;
         }
     }
 }

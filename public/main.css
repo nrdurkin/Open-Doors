@@ -41,8 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
 }
 .banner .side-spacer a {
   height: 100%;
@@ -180,6 +179,7 @@ nav ol li:hover {
 
 .glide {
   cursor: default !important;
+  background-color: #69c;
 }
 
 .slide {
@@ -311,6 +311,14 @@ nav ol li:hover {
 .about .description p,
 .support .description p {
   margin: 15px;
+}
+.about .financial-info,
+.support .financial-info {
+  color: black;
+}
+.about .financial-info:hover,
+.support .financial-info:hover {
+  color: darkblue;
 }
 
 /*# sourceMappingURL=main.css.map */
