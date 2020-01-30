@@ -40,6 +40,7 @@ body {
     .logo-subtitle {
         font-family: "helvetica";
         font-style: italic;
+        white-space: nowrap;
     }
 
     .side-spacer {
@@ -49,55 +50,63 @@ body {
         align-items: center;
         padding-bottom: 25px;
 
-        a{
-            height:100%;
+        a {
+            height: 100%;
             display: flex;
             align-items: center;
         }
+
         img {
             height: 80%;
         }
     }
 }
 
-.footer{
+.footer {
     height: 150px;
     background-color: #677d9e;
     display: flex;
     justify-content: center;
-    .container{
-        display:flex;
-        flex-direction:row;
-        margin:auto;
 
-        .col{
-            flex:1;
-            color:white;
-            border-left:2px solid white;
-            padding-left:10px;
-            .section{
-                color:#8ba685;
-                a{
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+
+        .col {
+            flex: 1;
+            color: white;
+            border-left: 2px solid white;
+            padding-left: 10px;
+
+            .section {
+                color: #8ba685;
+
+                a {
                     text-decoration: none;
                 }
             }
-            a{
-                color:inherit;
+
+            a {
+                color: inherit;
             }
         }
     }
 }
 
-.test{
-    .banner{
-        background-color:#69c;
-        .site-title{
-            color:white;
+.test {
+    .banner {
+        background-color: #69c;
+
+        .site-title {
+            color: white;
         }
     }
-    .footer{
-        background-color:#69c;
-        .section{
+
+    .footer {
+        background-color: #69c;
+
+        .section {
             color: #000080 !important;
         }
     }
@@ -105,12 +114,12 @@ body {
     .enlighten {
         color: #375431 !important;
     }
-    
+
 }
 
-.config{
-    .banner{
-        background-color:white;
+.config {
+    .banner {
+        background-color: white;
     }
 }
 
@@ -141,16 +150,31 @@ nav {
             display: flex;
             align-items: center;
             font-family: "Oxygen", sans-serif;
+            white-space: nowrap;
 
             &.active {
                 background-color: whitesmoke;
             }
 
             &:hover {
-                color: darkblue;
                 font-weight: bold;
                 cursor: pointer;
             }
+        }
+
+        .spacer {
+            flex: 1;
+            &:hover {
+                cursor: default;
+            }
+        }
+        .donate{
+            background-color:#8ba685;
+            color:white;
+            height:80%;
+            margin:auto;
+            border-radius: 3px;
+            margin-right:15px;
         }
     }
 }
@@ -202,7 +226,7 @@ nav {
 
 .glide {
     cursor: default !important;
-    background-color:#69c;
+    background-color: #69c;
 }
 
 .slide {
@@ -212,6 +236,7 @@ nav {
 
     .caption-container {
         flex: 1;
+        min-width: 250px;
         justify-content: center;
         display: flex;
         flex-direction: column;
@@ -240,8 +265,12 @@ nav {
 
     .photo-container {
         height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
 
         img {
+
             height: 100%;
         }
     }
@@ -273,41 +302,95 @@ nav {
             padding-left: 40px;
             padding-right: 40px;
         }
-        p{
-            font-size:20px;
-            a{
+
+        p {
+            font-size: 20px;
+
+            a {
                 text-decoration: none;
-                color:inherit;
-                &:hover{
-                    border-bottom:1px solid black;
+                color: inherit;
+
+                &:hover {
+                    border-bottom: 1px solid black;
                 }
             }
         }
-        .emphasis{
+
+        .emphasis {
             font-weight: 900;
-            font-size:23px;
+            font-size: 23px;
         }
     }
 }
 
 .contact {
-    .input-container {
+
+    .contact-container {
         display: flex;
-        flex: 1;
-        padding: 3px;
-    }
+        flex-direction: row;
 
-    input,
-    textarea {
-        display: block;
-        flex: 1;
-        padding: 3px;
-        resize: none;
-        margin: 0px;
-    }
+        .message-container {
+            flex: 1;
+            display: none;
+            height: 350px;
+            text-align: center;
+            padding-top: 10px;
+        }
 
-    textarea {
-        border-color: #ccc;
+        .email-container {
+            flex-direction: column;
+            flex: 1;
+            padding: 10px;
+
+            .input-container {
+
+                margin-bottom: 10px;
+
+                label {
+                    font-size: 12px;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    resize: none;
+                    font-size: 15px;
+                    border-radius: 3px;
+                    background-color: #e0ebf7;
+                    border: 1px solid lightgrey;
+                    padding: 5px;
+                }
+            }
+
+            .submit {
+                font-size: 20px;
+                background-color: #8ba685;
+                font-family: "Signika", sans-serif;
+                border: 1px solid white;
+                border-radius: 5px;
+                color: white;
+                float: right;
+
+                &:hover {
+                    border: 1px solid grey;
+                }
+            }
+        }
+
+        .text-ctn {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            padding-left: 15px;
+
+            .text {
+                text-align: center;
+                margin-top: 60px;
+                font-size: 25px;
+                font-family: "Signika", sans-serif;
+            }
+        }
     }
 }
 
@@ -335,8 +418,8 @@ nav {
         .caption {
             font-size: 14px;
         }
-        
-        .quote{
+
+        .quote {
             margin: 15px;
             font-weight: bold;
             font-size: 20px;
@@ -347,10 +430,11 @@ nav {
 .about,
 .support {
     .big-text {
-        width: 80%;
         text-align: center;
+        width:80%;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin:auto;
     }
 
     .description {
@@ -359,10 +443,56 @@ nav {
         }
     }
 
-    .financial-info{
-        color:black;
-        &:hover{
-            color:darkblue;
+    .financial-info {
+        color: black;
+
+        &:hover {
+            color: darkblue;
+        }
+    }
+}
+
+.donate-widget {
+
+    margin:20px;
+
+    .options {
+        display: flex;
+
+        .discrete-val {
+            background-color: #b2c9e0;
+            font-size: 15px;
+            color: white;
+            border-radius: 0px;
+            border:1px solid white;
+            width: 100px;
+            height: 40px;
+            outline: 0;
+
+            &.active {
+                background-color: #69c;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        .submit-button {
+            margin-top:15px;
+            background-color: #8ba685;
+            height: 40px;
+            width: 150px;
+            color: white;
+            font-size: 15px;
+            &:hover{
+                cursor:pointer;
+            }
         }
     }
 }

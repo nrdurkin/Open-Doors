@@ -35,6 +35,7 @@ body {
 .banner .logo-subtitle {
   font-family: "helvetica";
   font-style: italic;
+  white-space: nowrap;
 }
 .banner .side-spacer {
   width: 250px;
@@ -125,14 +126,28 @@ nav ol li {
   display: flex;
   align-items: center;
   font-family: "Oxygen", sans-serif;
+  white-space: nowrap;
 }
 nav ol li.active {
   background-color: whitesmoke;
 }
 nav ol li:hover {
-  color: darkblue;
   font-weight: bold;
   cursor: pointer;
+}
+nav ol .spacer {
+  flex: 1;
+}
+nav ol .spacer:hover {
+  cursor: default;
+}
+nav ol .donate {
+  background-color: #8ba685;
+  color: white;
+  height: 80%;
+  margin: auto;
+  border-radius: 3px;
+  margin-right: 15px;
 }
 
 .dropdown {
@@ -189,6 +204,7 @@ nav ol li:hover {
 }
 .slide .caption-container {
   flex: 1;
+  min-width: 250px;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -214,6 +230,9 @@ nav ol li:hover {
 }
 .slide .photo-container {
   height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .slide .photo-container img {
   height: 100%;
@@ -257,21 +276,62 @@ nav ol li:hover {
   font-size: 23px;
 }
 
-.contact .input-container {
+.contact .contact-container {
   display: flex;
-  flex: 1;
-  padding: 3px;
+  flex-direction: row;
 }
-.contact input,
-.contact textarea {
-  display: block;
+.contact .contact-container .message-container {
   flex: 1;
-  padding: 3px;
+  display: none;
+  height: 350px;
+  text-align: center;
+  padding-top: 10px;
+}
+.contact .contact-container .email-container {
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+.contact .contact-container .email-container .input-container {
+  margin-bottom: 10px;
+}
+.contact .contact-container .email-container .input-container label {
+  font-size: 12px;
+}
+.contact .contact-container .email-container .input-container input,
+.contact .contact-container .email-container .input-container textarea {
+  width: 100%;
   resize: none;
-  margin: 0px;
+  font-size: 15px;
+  border-radius: 3px;
+  background-color: #e0ebf7;
+  border: 1px solid lightgrey;
+  padding: 5px;
 }
-.contact textarea {
-  border-color: #ccc;
+.contact .contact-container .email-container .submit {
+  font-size: 20px;
+  background-color: #8ba685;
+  font-family: "Signika", sans-serif;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  float: right;
+}
+.contact .contact-container .email-container .submit:hover {
+  border: 1px solid grey;
+}
+.contact .contact-container .text-ctn {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  padding-left: 15px;
+}
+.contact .contact-container .text-ctn .text {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 25px;
+  font-family: "Signika", sans-serif;
 }
 
 .board .bio {
@@ -303,10 +363,11 @@ nav ol li:hover {
 
 .about .big-text,
 .support .big-text {
-  width: 80%;
   text-align: center;
+  width: 80%;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin: auto;
 }
 .about .description p,
 .support .description p {
@@ -319,6 +380,44 @@ nav ol li:hover {
 .about .financial-info:hover,
 .support .financial-info:hover {
   color: darkblue;
+}
+
+.donate-widget {
+  margin: 20px;
+}
+.donate-widget .options {
+  display: flex;
+}
+.donate-widget .options .discrete-val {
+  background-color: #b2c9e0;
+  font-size: 15px;
+  color: white;
+  border-radius: 0px;
+  border: 1px solid white;
+  width: 100px;
+  height: 40px;
+  outline: 0;
+}
+.donate-widget .options .discrete-val.active {
+  background-color: #69c;
+}
+.donate-widget .options .discrete-val:hover {
+  cursor: pointer;
+}
+.donate-widget form {
+  display: flex;
+  justify-content: center;
+}
+.donate-widget form .submit-button {
+  margin-top: 15px;
+  background-color: #8ba685;
+  height: 40px;
+  width: 150px;
+  color: white;
+  font-size: 15px;
+}
+.donate-widget form .submit-button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

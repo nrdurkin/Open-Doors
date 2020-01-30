@@ -1,0 +1,26 @@
+<div class='donate-widget'>
+                    <div class='options'>
+                        <% for(var val of [20,50,100,500]) {%>
+                        <button onclick='selectVal(<%=val%>)' value='<%=val %>' class='discrete-val <%= (val==50) ? "active" : ""%>'>
+                            $<%= val %>
+                        </button>
+                        <% } %>
+                        <button class='discrete-val' onclick='selectVal(0)' value='0'>Other</button>
+                    </div>
+
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id='paypal-form'>
+                        <input type="hidden" name="cmd" value="_donations" />
+                        <input type="hidden" name="business" value="BR2BWY4CURP3A" />
+                        <input type="hidden" name="currency_code" value="USD" />
+                        <input id="paypal-amount" type="hidden" name="amount" value="20.00" />
+                        <button class='submit-button' type='submit'>Make Donation <i class="fas fa-hand-holding-usd"></i></button>
+                    </form>
+
+                    <script>
+                        function selectVal(val) {
+                            for (let el of document.getElementsByClassName('discrete-val')) el.classList.remove('active')
+                            document.querySelector("button[value='" + val + "']").classList.add('active');
+                            document.getElementById('paypal-amount').setAttribute('value', val + ".00");
+                        }
+                    </script>
+                </div>

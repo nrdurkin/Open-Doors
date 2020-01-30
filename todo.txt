@@ -1,8 +1,9 @@
-Style contact page
-update colors
-fill out support page (click on support us), get involved
 mobile css
 
+opendoorscorp.herokukuapp (live)
+open-doors-development.herokukuapp
 
-Donate through page
-IRS clarification
+hosting/domains
+switch paypal
+
+confirm .env

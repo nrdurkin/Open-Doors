@@ -11,50 +11,64 @@
                 <div class='title'>
                     Contact Us
                 </div>
-                <div style='margin-bottom:10px; margin-top:10px'>
-                    Send us an email at
-                    <a href="mailto:opendoorsfoundationct@gmail.com" target="_top">OpenDoorsFoundationCT@gmail.com</a>:
-                </div>
-                <div style='width:100%'>
-                    <form id='email-form'>
-                        <div style='display:flex; flex-direction:row; width:100%'>
+
+                <div class='contact-container'>
+                    <div class='message-container'>
+                        <div id='recieved' style='display:none;'>
+                            Your message has been recieved
+                        </div>
+                    </div>
+                    <div class='email-container'>
+                        <form id='email-form'>
                             <div class='input-container'>
-                                <input type="text" placeholder="Name:" name='name' required>
+                                <label for='name'>Your name</label>
+                                <input type="text" name='name' required>
                             </div>
                             <div class='input-container'>
-                                <input type="email" placeholder="Email Address:" name='email' required>
+                                <label for='email'>Email address</label>
+                                <input type="email" name='email' required>
                             </div>
+                            <div class='input-container'>
+                                <label for='subject'>Subject</label>
+                                <input type="text" name='subject' required minlength="5">
+                            </div>
+                            <div class='input-container'>
+                                <label for='message'>Message</label>
+                                <textarea type="text" rows="10" name='message' required minlength="5"></textarea>
+                            </div>
+                            <button type="submit" class='submit'>Send <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class='text-ctn'>
+                        <div class='text'>
+                            <div>Send us an email at</div>
+                            <div><a href="mailto:opendoorsfoundationct@gmail.com" target="_top">OpenDoorsFoundationCT@gmail.com</a></div>
                         </div>
-                        <div class='input-container'>
-                            <input type="text" placeholder="Subject:" name='subject' required minlength="5">
-                        </div>
-                        <div class='input-container'>
-                            <textarea type="text" placeholder="Message:" rows="10" name='message' required minlength="5"></textarea>
-                        </div>
-                        <button type="submit">Send</button>
-                    </form>
+                    </div>
                 </div>
-                <div id='recieved' style='display:none;'>
-                    Your message has been recieved
-                </div>
+
+
             </div>
         </div>
     </div>
-        <%- include ./partials/footer -%>
+    <%- include ./partials/footer -%>
 
 </body>
 
 <script>
+
     $('#email-form').submit(e => {
-        let data = $('#email-form').serializeArray().reduce(function (obj, item) {
+        let data = $('#email-form').serializeArray().reduce(function(obj, item) {
             obj[item.name] = item.value;
             return obj;
         }, {});
 
         $.post('/contact', data,
             d => {
-                $('#recieved').show();
                 $('#email-form')[0].reset();
+                $('.email-container').hide();
+                $('.message-container').show();
+                $('#recieved').fadeIn(1000);
             })
 
         e.preventDefault();

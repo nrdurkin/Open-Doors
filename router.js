@@ -4,7 +4,6 @@ var handler = express.Router();
 var nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 dotenv.config();
-
 let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -14,6 +13,11 @@ let transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASSWORD
     }
 });
+
+
+const fs = require('fs');
+let bios = JSON.parse(fs.readFileSync('bios.json'));
+console.log(bios);
 
 handler.get('/', (req, res) => {
     res.render('index', {
@@ -35,7 +39,8 @@ handler.get('/why-us', (req, res) =>{
 
 handler.get('/board', (req, res) => {
     res.render('board', {
-        title: 'About Us'
+        title: 'About Us',
+        bios: bios
     });
 });
 
