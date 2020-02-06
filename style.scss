@@ -175,6 +175,13 @@ nav {
             margin:auto;
             border-radius: 3px;
             margin-right:15px;
+            border: 1px solid white;
+            &:hover{
+                border:1px solid #a5c39e;
+            }
+            &:active{
+                background-color:#718e6a;;
+            }
         }
     }
 }
@@ -455,6 +462,8 @@ nav {
 .donate-widget {
 
     margin:20px;
+    display: flex;
+        justify-content: center;
 
     .options {
         display: flex;
@@ -479,20 +488,15 @@ nav {
         }
 
     }
-
-    form {
-        display: flex;
-        justify-content: center;
-        .submit-button {
-            margin-top:15px;
-            background-color: #8ba685;
-            height: 40px;
-            width: 150px;
-            color: white;
-            font-size: 15px;
-            &:hover{
-                cursor:pointer;
-            }
+    .submit-button {
+        margin-top:15px;
+        background-color: #8ba685;
+        height: 70px;
+        width: 250px;
+        color: white;
+        font-size: 25px;
+        &:hover{
+            cursor:pointer;
         }
     }
 }

@@ -148,6 +148,13 @@ nav ol .donate {
   margin: auto;
   border-radius: 3px;
   margin-right: 15px;
+  border: 1px solid white;
+}
+nav ol .donate:hover {
+  border: 1px solid #a5c39e;
+}
+nav ol .donate:active {
+  background-color: #718e6a;
 }
 
 .dropdown {
@@ -384,6 +391,8 @@ nav ol .donate {
 
 .donate-widget {
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 .donate-widget .options {
   display: flex;
@@ -404,19 +413,15 @@ nav ol .donate {
 .donate-widget .options .discrete-val:hover {
   cursor: pointer;
 }
-.donate-widget form {
-  display: flex;
-  justify-content: center;
-}
-.donate-widget form .submit-button {
+.donate-widget .submit-button {
   margin-top: 15px;
   background-color: #8ba685;
-  height: 40px;
-  width: 150px;
+  height: 70px;
+  width: 250px;
   color: white;
-  font-size: 15px;
+  font-size: 25px;
 }
-.donate-widget form .submit-button:hover {
+.donate-widget .submit-button:hover {
   cursor: pointer;
 }
 

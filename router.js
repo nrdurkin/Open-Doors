@@ -17,7 +17,6 @@ let transporter = nodemailer.createTransport({
 
 const fs = require('fs');
 let bios = JSON.parse(fs.readFileSync('bios.json'));
-console.log(bios);
 
 handler.get('/', (req, res) => {
     res.render('index', {

@@ -4,6 +4,6 @@ opendoorscorp.herokukuapp (live)
 open-doors-development.herokukuapp
 
 hosting/domains
-switch paypal
 
 confirm .env
+    Test contact before going live

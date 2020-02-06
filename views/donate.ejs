@@ -12,10 +12,10 @@
                     Make a Donation
                 </div>
 
-                <%- include ./partials/donate-widget -%>
+                <%- //include ./partials/donate-widget -%>
 
                 <div class='content-box'>
-                
+
                     <div class='big-text'>
                         <h2>
                             The <strong>Open Doors Foundation</strong> works actively and tirelessly to educate, enlighten, and empower future generations by “opening the doors” to opportunity.
@@ -25,6 +25,13 @@
                         <p>With the support of donors like you, we have been able to create both a supplemental after-school initiative and youth community farming program. We expand our students’ horizons and empower them through knowledge, by augmenting the scope of their education to include pre-professional courses, consisting of home economics and clothing design in addition to more traditional academic subjects.</p>
                         <p>We have enhanced the lives of hundreds of students in the village of Bolans, Antigua, and now hope to provide this program to our own neighbors! The Open Doors Foundation has developed plans to devise a similar after-school program, provide athletic and sports training and found a transformative internship program for graduating students in the greater Bridgeport and Fairfield County area.</p>
                         <p>Thank you, in advance, for your thoughtful consideration and generosity. The success of the Open Doors Foundation would not be possible without your support.</p>
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class='donate-widget'>
+                            <input type="hidden" name="cmd" value="_s-xclick" />
+                            <input type="hidden" name="hosted_button_id" value="75TEABXC7Q4HW" />
+                            <input type="hidden" name="currency_code" value="USD" />
+                            <button class='submit-button' type='submit'>Make Donation <i class="fas fa-hand-holding-usd"></i></button>
+                        </form>
 
                         <h3><a class='financial-info' href='https://apps.irs.gov/app/eos/displayAll.do?dispatchMethod=displayAllInfo&Id=1008804&ein=832492534&country=US&deductibility=all&dispatchMethod=searchAll&isDescending=false&city=Westport&ein1=&postDateFrom=&exemptTypeCode=al&submitName=Search&sortColumn=orgName&totalResults=1&names=Open+Doors+Foundation&resultsPerPage=25&indexOfFirstRow=0&postDateTo=&state=All+States' target="_blank">
                                 Financial Information and Proof of Non-Profit Status
