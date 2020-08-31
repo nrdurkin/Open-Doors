@@ -3,3 +3,6 @@ Began changelog
 Created donation widget
 Slight CSS tweaks to prevent bad wrapping
 Created abstracted solution for bios (included JSON file)
+
+May 24
+Added more bios

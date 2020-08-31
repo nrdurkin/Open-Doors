@@ -402,9 +402,15 @@ nav {
 }
 
 .board {
+    .bios{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     .bio {
-        margin-top: 20px;
-        max-width: 700px;
+        //450
+        max-width: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -419,7 +425,8 @@ nav {
         }
 
         img {
-            width: 60%;
+            max-height:50%;
+            max-width:60%;
         }
 
         .caption {

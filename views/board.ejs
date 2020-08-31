@@ -12,7 +12,7 @@
                 <div class='title'>
                     Board of Members
                 </div>
-                <div style='display:flex; flex-direction:column; align-items: center;'>
+                <div class='bios'>
                     <% for(var i=0; i<bios.length; i++){%>
                     <%-include('./partials/bio', {bio:bios[i]})-%>
                     <%}%>

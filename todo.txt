@@ -7,3 +7,5 @@ hosting/domains
 
 confirm .env
     Test contact before going live
+
+covid response

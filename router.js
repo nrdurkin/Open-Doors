@@ -67,6 +67,12 @@ handler.get('/involvement', (req, res) =>{
     });
 });
 
+handler.get('/covid-response', (req, res)=>{
+    res.render('covid-response', {
+        title: 'Covid Response'
+    });
+});
+
 handler.get('/contact', (req, res) => {
     res.render('contact', {
         title: 'Contact'

@@ -341,9 +341,14 @@ nav ol .donate:active {
   font-family: "Signika", sans-serif;
 }
 
+.board .bios {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .board .bio {
-  margin-top: 20px;
-  max-width: 700px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,7 +362,8 @@ nav ol .donate:active {
   padding: 5px;
 }
 .board .bio img {
-  width: 60%;
+  max-height: 50%;
+  max-width: 60%;
 }
 .board .bio .caption {
   font-size: 14px;
