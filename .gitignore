@@ -6,3 +6,5 @@ node_modules/
 *.sass.map
 *.scss.map
 *.scss
+.DS_Store
+todo.txt
